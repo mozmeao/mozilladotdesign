@@ -7373,6 +7373,7 @@ body.error404 .site-header {
 #blobs-kLEsZ g {
     will-change: transform;
 }
+/* Disable animation to improve performance
 #blobs-kLEsZ g > g {
     -webkit-transition: -webkit-transform 4s ease-in-out;
     transition: -webkit-transform 4s ease-in-out;
@@ -7380,6 +7381,7 @@ body.error404 .site-header {
     transition: transform 4s ease-in-out;
     transition: transform 4s ease-in-out, -webkit-transform 4s ease-in-out;
 }
+*/
 @media (orientation: portrait) {
     #blobs-kLEsZ {
         top: -40%;

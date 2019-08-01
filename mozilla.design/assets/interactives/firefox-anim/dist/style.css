@@ -15,10 +15,11 @@
 #blobs-kLEsZ g {
   will-change: transform;
 }
-
+/* Disable animation to improve performance
 #blobs-kLEsZ g > g {
   transition: transform 4s ease-in-out;
 }
+*/
 
 @media (orientation: portrait) {
   #blobs-kLEsZ {
