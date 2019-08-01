@@ -48,11 +48,11 @@ main {
 
 /* Idle Animations
  * ============================================================================================== */
-
+/* Disable animation to improve performance
 #blobs-kLEsZ .path-1 path { animation: idleTwo 20s infinite alternate ease-in-out; }
 #blobs-kLEsZ .path-2 path { animation: idleThree 16s infinite alternate ease-in-out; }
 #blobs-kLEsZ .path-3 path { animation: idleThree 14s infinite alternate ease-in-out; }
-
+*/
 @keyframes idleOne {
   0% { transform: scaleX(1) scaleY(1); }
   33% { transform: scaleX(1.1) scaleY(1.1); }
