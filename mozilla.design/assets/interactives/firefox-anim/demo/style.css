@@ -1,0 +1,105 @@
+/* Demo page setup
+ * ============================================================================================== */
+
+body {
+  margin: 0;
+  background-color: #20123A;
+}
+
+/* Add some space to demo the scroll state */
+main {
+  padding: 300vh 0;
+}
+
+/* Main SVG el setup
+ * ============================================================================================== */
+
+#blobs-kLEsZ {
+  width: 100vw;
+  height: 100vh;
+  /* Improve svg perf in FF */
+  transform: translate3d(0, 0, 0);
+  overflow: visible; /* Shows the blobs when you've scrolled down a bit */
+  position: sticky;
+  top: -90%;
+}
+
+#blobs-kLEsZ path {
+  transform-origin: center center;
+}
+
+#blobs-kLEsZ g {
+  will-change: transform;
+}
+
+#blobs-kLEsZ g > g {
+  transition: transform 4s ease-in-out;
+}
+
+@media (orientation: portrait) {
+  #blobs-kLEsZ {
+    top: -40%; /* Svg contents is 50 up on mobile, so we stick 50% less high */
+  }
+
+  #blobs-kLEsZ > g {
+    transform: translateY(-50%);
+  }
+}
+
+/* Idle Animations
+ * ============================================================================================== */
+
+#blobs-kLEsZ .path-1 path { animation: idleTwo 20s infinite alternate ease-in-out; }
+#blobs-kLEsZ .path-2 path { animation: idleThree 16s infinite alternate ease-in-out; }
+#blobs-kLEsZ .path-3 path { animation: idleThree 14s infinite alternate ease-in-out; }
+
+@keyframes idleOne {
+  0% { transform: scaleX(1) scaleY(1); }
+  33% { transform: scaleX(1.1) scaleY(1.1); }
+  66% { transform: scaleX(0.9) scaleY(1); }
+}
+
+@keyframes idleTwo {
+  0% { transform: scaleX(1) scaleY(1); }
+  33% { transform: scaleX(0.9) scaleY(1.1); }
+  66% { transform: scaleX(1) scaleY(0.9); }
+}
+
+@keyframes idleThree {
+  0% { transform: scaleX(1) scaleY(1); }
+  33% { transform: scaleX(1.1) scaleY(0.9); }
+  66% { transform: scaleX(1) scaleY(0.9); }
+}
+
+/* Mouse-blob positions
+ * ============================================================================================== */
+
+#blobs-kLEsZ[data-location="top left"] .path-1 { transform: translate(-5%, -5%); }
+#blobs-kLEsZ[data-location="top left"] .path-2 { transform: translate(-10%, -10%); }
+#blobs-kLEsZ[data-location="top left"] .path-3 { transform: translate(-15%, -15%); }
+#blobs-kLEsZ[data-location="top center"] .path-1 { transform: translate(0px, -5%); }
+#blobs-kLEsZ[data-location="top center"] .path-2 { transform: translate(0px, -10%); }
+#blobs-kLEsZ[data-location="top center"] .path-3 { transform: translate(0px, -15%); }
+#blobs-kLEsZ[data-location="top right"] .path-1 { transform: translate(5%, -5%); }
+#blobs-kLEsZ[data-location="top right"] .path-2 { transform: translate(10%, -10%); }
+#blobs-kLEsZ[data-location="top right"] .path-3 { transform: translate(15%, -15%); }
+
+#blobs-kLEsZ[data-location="mid left"] .path-1 { transform: translate(-5%, 0px); }
+#blobs-kLEsZ[data-location="mid left"] .path-2 { transform: translate(-10%, 0px); }
+#blobs-kLEsZ[data-location="mid left"] .path-3 { transform: translate(-15%, 0px); }
+#blobs-kLEsZ[data-location="mid center"] .path-1 { transform: translate(0px, 0px); }
+#blobs-kLEsZ[data-location="mid center"] .path-2 { transform: translate(0px, 0px); }
+#blobs-kLEsZ[data-location="mid center"] .path-3 { transform: translate(0px, 0px); }
+#blobs-kLEsZ[data-location="mid right"] .path-1 { transform: translate(5%, 0px); }
+#blobs-kLEsZ[data-location="mid right"] .path-2 { transform: translate(10%, 0px); }
+#blobs-kLEsZ[data-location="mid right"] .path-3 { transform: translate(15%, 0px); }
+
+#blobs-kLEsZ[data-location="bottom left"] .path-1 { transform: translate(-5%, 5%); }
+#blobs-kLEsZ[data-location="bottom left"] .path-2 { transform: translate(-10%, 10%); }
+#blobs-kLEsZ[data-location="bottom left"] .path-3 { transform: translate(-15%, 15%); }
+#blobs-kLEsZ[data-location="bottom center"] .path-1 { transform: translate(0px, 5%); }
+#blobs-kLEsZ[data-location="bottom center"] .path-2 { transform: translate(0px, 10%); }
+#blobs-kLEsZ[data-location="bottom center"] .path-3 { transform: translate(0px, 15%); }
+#blobs-kLEsZ[data-location="bottom right"] .path-1 { transform: translate(5%, 5%); }
+#blobs-kLEsZ[data-location="bottom right"] .path-2 { transform: translate(10%, 10%); }
+#blobs-kLEsZ[data-location="bottom right"] .path-3 { transform: translate(15%, 15%); }
