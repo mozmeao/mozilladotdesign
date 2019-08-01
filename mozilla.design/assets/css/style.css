@@ -7405,7 +7405,7 @@ body.error404 .site-header {
     -webkit-animation: idleThree 14s infinite alternate ease-in-out;
     animation: idleThree 14s infinite alternate ease-in-out;
 }
-*/
+
 @-webkit-keyframes idleOne {
     0% {
         -webkit-transform: scaleX(1) scaleY(1);
@@ -7625,6 +7625,8 @@ body.error404 .site-header {
     -ms-transform: translate(15%, 15%);
     transform: translate(15%, 15%);
 }
+*/
+
 .section-nav {
     -webkit-box-align: center;
     -ms-flex-align: center;
